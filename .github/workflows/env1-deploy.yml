@@ -1,0 +1,15 @@
+name: Deploy to env1
+
+concurrency: env1
+
+on:
+  workflow_dispatch
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: env1
+    steps:
+      - name: deploy
+        run: echo Deploy, world!
+        
